@@ -4,15 +4,14 @@
   "category": ["in-game", "ui", "economy"],
   "context": "client",
   "date": "2015/02/24",
-  "description": "Status bar that emphasises income and expense so that they can be visually compared.",
+  "description": "Economy bar that focuses on how much metal is being spent, and what is limiting that spending.",
   "display_name": "Applied Power",
   "forum": null,
-  "identifier": "com.wondible.pa.gross_economy",
+  "identifier": "com.wondible.pa.applied_power",
   "scenes": {
     "live_game_econ": [
-      "coui://ui/mods/gross_economy/live_game_econ.css",
-      "coui://ui/mods/gross_economy/bootstrap.js"
-    ],
+      "coui://ui/mods/applied_power/bootstrap.js"
+    ]
   },
   "priority": 100,
   "signature": "not yet implemented",

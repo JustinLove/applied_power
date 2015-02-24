@@ -1,11 +1,9 @@
 define([
-  'gross_economy/resource',
-  'gross_economy/judgement',
-  'text!gross_economy/status_bar_resource.html'
+  'applied_power/resource',
+  'applied_power/judgement',
 ], function(
   extendResource,
-  judgement,
-  html
+  judgement
 ) {
   "use strict";
 
@@ -70,54 +68,11 @@ define([
     }
   })
 
-  var effColorCalculated = ko.computed(function() {
-    if (energy.ratio() < metal.ratio()) {
-      return energy.coloration()
-    } else {
-      return metal.coloration()
-    }
-  })
-
-  var effColoration = ko.observable()
-
-  effColorCalculated.subscribe(effColoration)
-
-  var $eff
-
-  effColoration.subscribe(function(value) {
-    if ($eff) {
-      $eff.attr('class', "gross-economy-eff " + value)
-    }
-  })
-
-  var theme = function() {
-    switch (api.settings.isSet('ui', 'gross_economy_theme', true)) {
-      default:
-      case 'INVERSE':
-        return 'ge-color-inverse'
-      case 'CLASSIC BLACK':
-        return 'ge-color-black'
-    }
-  }
-
-  var installTemplate = function ($parent, html, model) {
-    $parent.parent().attr('class', model.resource + ' receiveMouse')
-    $parent.html(html)
-    model.$parent = $parent
-    ko.applyBindings(model, $parent[0]);
-  };
+  model.metal = metal
+  model.energy = energy
 
   return {
     ready: function() {
-      console.log("Gross Economy ready, modifing status bar");
-      installTemplate($('.div-metal .contents'), html, metal);
-      installTemplate($('.div-energy .contents'), html, energy);
-      $eff = $('.div-eff').attr('class', 'gross-economy-eff')
-      $('.div-econ-bar').attr('class', 'gross-economy-bar ignoreMouse ' + theme())
-
-      //require(['gross_economy/fake_economy'], function(fake) {
-        //setTimeout(function() { fake.update() }, 1000)
-      //})
     },
     metal: metal,
     energy: energy

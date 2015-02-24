@@ -1,12 +1,11 @@
 (function() {
   var config = require.s.contexts._.config
   config.waitSeconds = 0
-  config.paths.gross_economy = 'coui://ui/mods/gross_economy'
-  config.paths.text = config.paths.text || 'coui://ui/mods/gross_economy/text'
+  config.paths.applied_power = 'coui://ui/mods/applied_power'
 })()
 
-require(['gross_economy/status_bar'], function(status_bar) {
+require(['applied_power/live_game_econ'], function(ap) {
   "use strict";
 
-  $(status_bar.ready)
+  $(ap.ready)
 })
