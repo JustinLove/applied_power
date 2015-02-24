@@ -6,6 +6,7 @@
 
 require(['applied_power/live_game_econ'], function(ap) {
   "use strict";
+  console.log('bootstrap')
 
   $(ap.ready)
 })

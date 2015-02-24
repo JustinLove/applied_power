@@ -71,8 +71,18 @@ define([
   model.metal = metal
   model.energy = energy
 
+  model.appliedPower = ko.computed(function() {
+    if (metal.current() > 1) {
+      return metal.currentLoss()
+    } else {
+      return Math.min(metal.currentLoss(), metal.currentGain())
+    }
+  })
+
   return {
     ready: function() {
+      console.log('ready')
+      ko.applyBindings(model)
     },
     metal: metal,
     energy: energy
