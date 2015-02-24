@@ -79,6 +79,10 @@ define([
     }
   })
 
+  model.appliedPowerString = ko.computed(function() {
+    return model.formatedRateString(model.appliedPower())
+  })
+
   return {
     ready: function() {
       console.log('ready')
