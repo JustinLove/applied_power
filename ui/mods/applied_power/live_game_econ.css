@@ -1,0 +1,473 @@
+/**** Overall ****/
+
+.gross-economy-bar {
+  height: 65px;
+  margin: 0 auto 0;
+  text-align: center;
+  font-family:'Droid Sans Mono';
+  position: relative;
+}
+
+.metal {
+  width: 49%;
+  text-align: right;
+  display: inline-block;
+}
+
+
+.energy {
+  width: 49%;
+  text-align: left;
+  display: inline-block;
+}
+
+.contents {
+  height: 35px;
+  position: relative;
+}
+
+.ge-bar-segment,
+.ge-net-segment,
+.ge-storage-segment {
+  display: inline-block;
+  height: 30px;
+  vertical-align: top;
+  margin-top: 4px;
+}
+
+.metal .contents {
+  float:left;
+}
+
+.energy .contents {
+  float:right;
+}
+
+.tooltip {
+  text-transform: uppercase;
+}
+
+/**** Overall Efficiency ****/
+
+.gross-economy-eff {
+  height: 35px;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  font-family: 'Armata Regular';
+}
+
+/***** Icon *****/
+
+.ge-icon-background {
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  z-index: 0;
+}
+
+.ge-category-icon {
+  opacity: 0.5;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+}
+
+.metal .ge-category-icon {
+  background: url(coui://ui/main/game/live_game/img/status_bar/icon-status-metal.png) no-repeat;
+  background-size: 100%;
+  top: 4px;
+  left: 8px;
+}
+
+.energy .ge-category-icon {
+  background: url(coui://ui/main/game/live_game/img/status_bar/icon-status-energy.png) no-repeat;
+  background-size: 100%;
+  top: 0px;
+  left: 8px;
+}
+
+/***** Supply/Demand Bars ****/
+
+.ge-bar-segment {
+  margin-top: 0px;
+  height: 34px;
+  position: relative;
+}
+
+.ge-bar-ticks {
+  position: relative;
+}
+
+.ge-tick {
+  position: absolute;
+  height: 34px;
+  width: 0px;
+  border-right: solid 1px;
+}
+
+.ge-bar-frame {
+  width: 240px;
+  height: 22px;
+  position: relative;
+}
+
+.ge-bar-gain, .ge-bar-from-storage, .ge-bar-from-sharing {
+  position: absolute;
+  top: 6px;
+  height: 22px;
+  z-index: 0;
+  border: solid 2px;
+}
+
+.ge-bar-loss, .ge-bar-to-storage, .ge-bar-to-sharing {
+  position: absolute;
+  top: 12px;
+  height: 10px;
+  z-index: 1;
+}
+
+.ge-bar-from-storage, .ge-bar-from-sharing {
+  border-left: none;
+  border-right: none;
+}
+
+.ge-bar-range {
+  border-top: solid 2px;
+  position: absolute;
+  top: 14px;
+  height: 1px;
+  z-index: 2;
+}
+
+/****** Bars: Gross *****/
+
+.ge-gross-demand, .ge-gross-supply {
+  overflow: visible;
+  font-family: 'Armata Regular';
+  position: absolute;
+  z-index: 10;
+}
+
+.ge-gross-demand {
+  text-align: right;
+  font-size: 10px;
+  top: 11px;
+  left: 4px;
+}
+
+.ge-gross-supply {
+  text-align: center;
+  font-size: 20px;
+  top: 4px;
+  left: 50px;
+  opacity: 0.6;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/***** Net ****/
+
+.ge-net-segment {
+  margin-left: -40px;
+  width: 40px;
+  overflow: visible;
+  font-size: 10px;
+  font-family: 'Armata Regular';
+  text-align: center;
+}
+
+.ge-net {
+  padding: 2px 4px;
+  position: relative;
+  top: -2px;
+  z-index: 10;
+}
+
+
+/****** Storage Section ******/
+
+.ge-storage-number {
+  position: absolute;
+  bottom: 0;
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.ge-storage-frame {
+  border: 1px solid;
+  border-radius: 2px;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.ge-storage-fill {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Inverse Colors */
+
+.ge-color-inverse.gross-economy-bar {
+  width: 740px;
+}
+
+.ge-color-inverse .gross-economy-eff {
+  width: 80px;
+  left: 330px;
+  border: solid #333 1px;
+  border-top: none;
+  border-corner-shape: bevel;
+  background: #888;
+  color: black;5
+}
+
+.ge-color-inverse .build_eff_text {
+  color: black;
+}
+
+.ge-color-inverse .div_rate_ctr_perc_center {
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: inherit;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: black;
+}
+
+.ge-color-inverse .contents {
+  border: solid #333 1px;
+  border-top: none;
+  border-corner-shape: bevel;
+  background-color: #888;
+  color: black;
+}
+
+.ge-color-inverse .metal .contents {
+  padding: 0px 50px 0px 22px ;
+  border-radius: 0 0 0 22px;
+}
+
+.ge-color-inverse .energy .contents {
+  padding: 0px 22px 0px 50px ;
+  border-radius: 0 0 22px 0;
+}
+
+.ge-color-inverse .ge-storage-frame {
+  border-color: black;
+  background-color: #888;
+}
+
+.ge-color-inverse .ge-storage-fill {
+  background-color: white;
+}
+
+.ge-color-inverse .ge-bar-gain {
+  border-color: black;
+}
+
+.ge-color-inverse .ge-bar-loss {
+  background-color: black;
+}
+
+.ge-color-inverse .ge-bar-to-storage {
+  background-color: white;
+}
+
+.ge-color-inverse .ge-bar-from-storage {
+  border-color: white;
+}
+
+.ge-color-inverse .ge-bar-to-sharing {
+  background-color: #0f0;
+}
+
+.ge-color-inverse .ge-bar-from-sharing {
+  border-color: #0f0;
+}
+
+.ge-color-inverse .ge-bar-range {
+  border-color: #888;
+}
+
+.ge-color-inverse .ge-gross-supply {
+  color: #8f8;
+}
+
+.ge-color-inverse .ge-gross-demand {
+  color: #f88;
+}
+
+.ge-color-inverse .ge-net {
+  color: black;
+}
+
+.ge-color-inverse .ge-storage-number {
+  color: black;
+}
+
+.ge-color-inverse .rate-wasted {
+  background-color: #6cf;
+}
+
+.ge-color-inverse .rate-good {
+  background-color: #0a0;
+}
+
+.ge-color-inverse .rate-warning {
+  background-color: #dd0;
+}
+
+.ge-color-inverse .rate-danger {
+  background-color: orange;
+}
+
+.ge-color-inverse .rate-critical {
+  background-color: red;
+}
+
+.ge-color-inverse .economic-limit .ge-net {
+  background-color: black;
+  color: white;
+}
+
+/* Classic Black Colors */
+
+.ge-color-black.gross-economy-bar {
+  width: 820px;
+}
+
+.ge-color-black .gross-economy-eff {
+  width: 150px;
+  left: 335px;
+  background: url('coui://ui/main/game/live_game/img/status_bar/img-efficiency-bground.png') 0 -15px no-repeat;
+}
+
+.ge-color-black .metal {
+  border-image: url('coui://ui/main/game/live_game/img/status_bar/img-econ-bar-left.png') 60 25 0 51 fill;
+  border-width: 60px 25px 0px 51px;
+  margin-right: -17px;
+  margin-top: -15px;
+}
+
+.ge-color-black .energy {
+  border-image: url('coui://ui/main/game/live_game/img/status_bar/img-econ-bar-right.png') 60 51 0 25 fill;
+  border-width: 60px 51px 0px 25px;
+  margin-left: -17px;
+  margin-top: -15px;
+}
+
+.ge-color-black .contents {
+  margin-top: -47px;
+}
+
+.ge-color-black .metal .ge-storage-fill {
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(1, #00BBFF),
+  color-stop(0, #0279A1)
+  );
+}
+
+.ge-color-black .energy .ge-storage-fill {
+  background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(1, #F9EC31),
+  color-stop(0, #ADA100)
+  );
+}
+
+.ge-color-black .ge-bar-gain {
+  border-color: #0B0;
+}
+
+.ge-color-black .ge-bar-loss {
+  background-color: red;
+}
+
+.ge-color-black .ge-bar-to-storage {
+  background-color: #B00;
+}
+
+.ge-color-black .ge-bar-from-storage {
+  border-color: #080;
+}
+
+.ge-color-black .ge-bar-to-sharing {
+  background-color: #900;
+}
+
+.ge-color-black .ge-bar-from-sharing {
+  border-color: #060;
+}
+
+.ge-color-black .ge-bar-range {
+  border-color: white;
+}
+
+.ge-color-black .ge-gross-supply {
+  color: #8f8;
+}
+
+.ge-color-black .ge-gross-demand {
+  color: #fff; 
+}
+
+.ge-color-black .ge-storage-number {
+  color: white;
+}
+
+.ge-color-black .rate-wasted .ge-net {
+  color: #6cf;
+}
+
+.ge-color-black .rate-good .ge-net {
+  color: #0a0;
+}
+
+.ge-color-black .rate-warning .ge-net {
+  color: #dd0;
+}
+
+.ge-color-black .rate-danger .ge-net {
+  color: orange;
+}
+
+.ge-color-black .rate-critical .ge-net {
+  color: red;
+}
+
+.ge-color-black .rate-wasted .economic-limit .ge-net {
+  color: black;
+  background-color: #6cf;
+}
+
+.ge-color-black .rate-good .economic-limit  .ge-net {
+  color: black;
+  background-color: #0a0;
+}
+
+.ge-color-black .rate-warning .economic-limit  .ge-net {
+  color: black;
+  background-color: #dd0;
+}
+
+.ge-color-black .rate-danger .economic-limit  .ge-net {
+  color: black;
+  background-color: orange;
+}
+
+.ge-color-black .rate-critical .economic-limit .ge-net {
+  color: black;
+  background-color: red;
+}
+

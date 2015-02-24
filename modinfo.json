@@ -1,0 +1,20 @@
+{
+  "author": "wondible",
+  "build": "78071",
+  "category": ["in-game", "ui", "economy"],
+  "context": "client",
+  "date": "2015/02/24",
+  "description": "Status bar that emphasises income and expense so that they can be visually compared.",
+  "display_name": "Applied Power",
+  "forum": null,
+  "identifier": "com.wondible.pa.gross_economy",
+  "scenes": {
+    "live_game_econ": [
+      "coui://ui/mods/gross_economy/live_game_econ.css",
+      "coui://ui/mods/gross_economy/bootstrap.js"
+    ],
+  },
+  "priority": 100,
+  "signature": "not yet implemented",
+  "version": "0.1.0"
+}
