@@ -60,7 +60,7 @@
     padding-right: 94px;
 }
 
-.div-eff {
+.div-ap {
     height: 45px;
     width: 720px;
     background: url('img/status_bar/img-efficiency-bground.png') top center no-repeat;
@@ -169,7 +169,7 @@
     margin: 0px 0px 0px 0px;
 }
 
-.build_eff_text {
+.ap_text {
     margin: 1px 0px -4px 0px;
     text-transform: uppercase;
     color: #FFF;
