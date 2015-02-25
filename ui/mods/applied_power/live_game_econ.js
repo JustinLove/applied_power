@@ -71,6 +71,18 @@ define([
   model.metal = metal
   model.energy = energy
 
+  model.buildPower = ko.computed(function() {
+    if (energy.ratio() != 0) {
+      return metal.currentLoss() / energy.ratio()
+    } else {
+      return metal.currentLoss()
+    }
+  })
+
+  model.buildPowerString = ko.computed(function() {
+    return model.formatedRateString(model.buildPower())
+  })
+
   model.appliedPower = ko.computed(function() {
     if (metal.current() > 1) {
       return metal.currentLoss()
