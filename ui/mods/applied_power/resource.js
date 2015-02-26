@@ -20,6 +20,7 @@ define(['applied_power/series'], function(series) {
     // likely overwritten
     var logScale = 1000
     var transform = linearTransform 
+    resource.transform = transform
 
     var percent = function(left, right) {
       return ko.computed(function() {
@@ -28,8 +29,6 @@ define(['applied_power/series'], function(series) {
         return '' + (100 * d) + '%'
       })
     }
-
-    transform = linearTransform
 
     resource.gain = series(resource.currentGain)
     resource.loss = series(resource.currentLoss)
@@ -92,6 +91,8 @@ define(['applied_power/series'], function(series) {
     var unit_rightFromStorage = ko.computed(function() {
       return unit_gain() + unit_fromSharing() + unit_fromStorage()
     })
+
+    resource.percentLoss =  percent(zero, unit_loss)
 
     resource.bars = [
       {

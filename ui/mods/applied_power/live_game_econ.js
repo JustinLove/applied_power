@@ -83,6 +83,18 @@ define([
     return model.formatedRateString(model.buildPower())
   })
 
+  model.buildPowerOffset = ko.computed(function() {
+    var d = 0.5 - metal.transform(model.buildPower())/2
+    //if (d < 0) {return 0}
+    return '' + (100 * d) + '%'
+  })
+
+  model.buildPowerPercent = ko.computed(function() {
+    var d = metal.transform(model.buildPower())
+    if (d < 0) {return 0}
+    return '' + (100 * d) + '%'
+  })
+
   model.appliedPower = ko.computed(function() {
     if (metal.current() > 1) {
       return metal.currentLoss()

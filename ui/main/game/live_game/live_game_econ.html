@@ -67,7 +67,9 @@
               <div class="build-power-block">
                 <div class="color_negative" style="box-shadow: none;" data-placement="bottom" data-bind="text: buildPowerString, tooltip: tooltipMetalExpended">-8888</div>
               </div>
-              <div class="metal-demand-pipe"></div>
+              <div class="metal-demand-pipe">
+                <div class="metal-demand-flow" data-bind="style: {top: buildPowerOffset, height: buildPowerPercent}"></div>
+              </div>
               <div class="energy-efficiency-block">
                 <div class="" data-placement="bottom" data-bind="text: energy.efficiency, css: energyTextColorCSS, tooltip: tooltipEnergyEfficiency">8888%</div>
               </div>
