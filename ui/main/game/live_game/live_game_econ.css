@@ -276,6 +276,7 @@
   position: relative;
 }
 
+
 .metal-demand-flow {
   position: absolute;
   top: 0;
@@ -284,6 +285,17 @@
   right: 0;
   margin: auto;
   width: 100%;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.effective-build-power-flow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 500%;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
 }

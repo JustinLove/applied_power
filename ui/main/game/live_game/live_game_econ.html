@@ -73,7 +73,9 @@
               <div class="energy-efficiency-block">
                 <div class="" data-placement="bottom" data-bind="text: energy.efficiency, css: energyTextColorCSS, tooltip: tooltipEnergyEfficiency">8888%</div>
               </div>
-              <div class="effective-build-power-pipe"></div>
+              <div class="effective-build-power-pipe">
+                <div class="effective-build-power-flow" data-bind="style: {height: metal.percentLoss}"></div>
+              </div>
               <div class="metal-supply-block">
                 <div class="color_positive" style="box-shadow: none;" data-placement="bottom" data-bind="text: metalGainString, tooltip: tooltipMetalProduced">+8888</div>
               </div>
