@@ -244,6 +244,39 @@
     line-height:1.2;
 }
 
+.build-power-block,
+.energy-efficiency-block,
+.metal-supply-block,
+.storage-block {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  border: 1px solid;
+  border-radius: 2px;
+  border-color: #ccc;
+  position: relative;
+}
+
+.build-power-block,
+.energy-efficiency-block,
+.metal-supply-block {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.metal-demand-pipe,
+.effective-build-power-pipe,
+.net-metal-pipe,
+.effective-applied-power-pipe {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+  margin-top: 4px;
+}
+
 /****** Storage Section ******/
 
 .storage-number {
@@ -255,14 +288,6 @@
   display: block;
 }
 
-.storage-frame {
-  border: 1px solid;
-  border-radius: 2px;
-  width: 30px;
-  height: 25px;
-  position: relative;
-}
-
 .storage-fill {
   height: 75%;
   width: 100%;
@@ -270,8 +295,7 @@
   bottom: 0;
 }
 
-.storage-frame {
-  border-color: #ccc;
+.storage-block {
   background-color: #888;
 }
 

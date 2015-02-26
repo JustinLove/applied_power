@@ -65,23 +65,21 @@
         <div class="div-metal receiveMouse">
             <div class="contents">
               <div class="build-power-block">
-                <div class="rate_stat text_rate color_negative" style="box-shadow: none;" data-placement="bottom" data-bind="text: buildPowerString, tooltip: tooltipMetalExpended">-8888</div>
+                <div class="color_negative" style="box-shadow: none;" data-placement="bottom" data-bind="text: buildPowerString, tooltip: tooltipMetalExpended">-8888</div>
               </div>
               <div class="metal-demand-pipe"></div>
               <div class="energy-efficiency-block">
-                <div class="div_rate_ctr_overall text_rate" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.efficiency, css: energyTextColorCSS, tooltip: tooltipEnergyEfficiency">8888%</div>
+                <div class="" data-placement="bottom" data-bind="text: energy.efficiency, css: energyTextColorCSS, tooltip: tooltipEnergyEfficiency">8888%</div>
               </div>
               <div class="effective-build-power-pipe"></div>
               <div class="metal-supply-block">
-                <div class="rate_stat text_rate color_positive" style="box-shadow: none;" data-placement="bottom" data-bind="text: metalGainString, tooltip: tooltipMetalProduced">+8888</div>
+                <div class="color_positive" style="box-shadow: none;" data-placement="bottom" data-bind="text: metalGainString, tooltip: tooltipMetalProduced">+8888</div>
               </div>
               <div class="net-metal-pipe"></div>
               <div class="storage-block" data-bind="tooltip: 'metal storage'" data-placement="bottom">
-                <div class="storage-frame">
-                  <div class="storage-fill" data-bind="style: { height: metal.fractionString() }"></div>
-                  <div class="storage-number">
-                    <span data-bind="text: metal.currentString">8888</span>
-                  </div>
+                <div class="storage-fill" data-bind="style: { height: metal.fractionString() }"></div>
+                <div class="storage-number">
+                  <span data-bind="text: metal.currentString">8888</span>
                 </div>
               </div>
               <div class="effective-applied-power-pipe"></div>
