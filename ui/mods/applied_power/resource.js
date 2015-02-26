@@ -42,7 +42,7 @@ define(['applied_power/series'], function(series) {
       return resource.currentGain() / denom
     })
     resource.efficiency = ko.computed(function() {
-      return '' + (100 * resource.ratio()) + '%'
+      return '' + Math.round(100 * resource.ratio()) + '%'
     })
     resource.colorCalculated = ko.computed(function() {
       var storage = resource.current() / resource.max()
