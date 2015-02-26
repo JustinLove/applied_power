@@ -264,11 +264,12 @@
   font-size: 12px;
   text-align: center;
   padding-top: 8px;
+  z-index: 20;
 }
 
 .metal-demand-pipe,
 .effective-build-power-pipe,
-.net-metal-pipe,
+.metal-supply-pipe,
 .effective-applied-power-pipe {
   display: inline-block;
   width: 30px;
@@ -276,28 +277,33 @@
   position: relative;
 }
 
-
-.metal-demand-flow {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 100%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
-}
-
-.effective-build-power-flow {
+.metal-demand-flow,
+.effective-build-power-flow,
+.metal-supply-flow,
+.effective-applied-power-flow {
   position: absolute;
   top: 0;
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.metal-demand-flow {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.effective-build-power-flow {
   width: 500%;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
+  z-index: 10;
+}
+
+.metal-supply-flow {
+  background-color: green;
 }
 
 /****** Storage Section ******/
@@ -320,6 +326,7 @@
 
 .storage-block {
   background-color: #888;
+  z-index: 20;
 }
 
 .storage-fill {

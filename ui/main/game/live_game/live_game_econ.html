@@ -79,7 +79,9 @@
               <div class="metal-supply-block">
                 <div class="color_positive" style="box-shadow: none;" data-placement="bottom" data-bind="text: metalGainString, tooltip: tooltipMetalProduced">+8888</div>
               </div>
-              <div class="net-metal-pipe"></div>
+              <div class="metal-supply-pipe">
+                <div class="metal-supply-flow" data-bind="style: {height: metal.percentGain}"></div>
+              </div>
               <div class="storage-block" data-bind="tooltip: 'metal storage'" data-placement="bottom">
                 <div class="storage-fill" data-bind="style: { height: metal.fractionString() }"></div>
                 <div class="storage-number">

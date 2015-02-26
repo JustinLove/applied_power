@@ -92,7 +92,8 @@ define(['applied_power/series'], function(series) {
       return unit_gain() + unit_fromSharing() + unit_fromStorage()
     })
 
-    resource.percentLoss =  percent(zero, unit_loss)
+    resource.percentLoss = percent(zero, unit_loss)
+    resource.percentGain = percent(zero, unit_gain)
 
     resource.bars = [
       {
