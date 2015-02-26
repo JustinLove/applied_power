@@ -243,3 +243,42 @@
     max-width:none;
     line-height:1.2;
 }
+
+/****** Storage Section ******/
+
+.storage-number {
+  position: absolute;
+  bottom: 0;
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+
+.storage-frame {
+  border: 1px solid;
+  border-radius: 2px;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.storage-fill {
+  height: 75%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.storage-frame {
+  border-color: #ccc;
+  background-color: #888;
+}
+
+.storage-fill {
+  background-color: white;
+}
+
+.storage-number {
+  color: black;
+}
