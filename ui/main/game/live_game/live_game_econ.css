@@ -278,6 +278,11 @@
 
 .metal-demand-flow {
   position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 100%;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
