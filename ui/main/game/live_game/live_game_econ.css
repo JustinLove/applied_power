@@ -306,6 +306,10 @@
   background-color: green;
 }
 
+.effective-applied-power-flow {
+  background-color: green;
+}
+
 /****** Storage Section ******/
 
 .storage-number {

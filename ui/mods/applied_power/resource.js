@@ -78,6 +78,10 @@ define(['applied_power/series'], function(series) {
       var net = Math.max(0, resource.currentLoss() - resource.currentGain() - resource.shared())
       return Math.min(net, resource.current())
     })
+    var unit_spent = ko.computed(function() {
+      var available = resource.currentGain() + resource.current()
+      return Math.min(resource.currentLoss(), available)
+    })
 
     var unit_rightToStorage = ko.computed(function() {
       return unit_loss() + unit_toStorage()
@@ -94,6 +98,7 @@ define(['applied_power/series'], function(series) {
 
     resource.percentLoss = percent(zero, unit_loss)
     resource.percentGain = percent(zero, unit_gain)
+    resource.percentSpent = percent(zero, unit_spent)
 
     resource.bars = [
       {
