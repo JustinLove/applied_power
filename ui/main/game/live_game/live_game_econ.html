@@ -50,13 +50,18 @@
     <div class="div-econ-bar ignoreMouse" data-bind="visible: showResources">
         <!--- Applied Power ---->
         <div class="div-ap" data-placement="bottom" data-bind="tooltip: economyEfficiencyTooltip">
-            <div style="box-shadow: none; width: 60px; margin-left: auto; margin-right: auto">
+            <div class="ap-box">
                 <div class="ap-text">
                     Power
                 </div>
+                <div class="build-efficiency" data-bind="text: economyEfficiencyPercString">
+                    0
+                </div>
                 <div class="ap-number receiveMouse" style="box-shadow: none;"
                     data-bind="text: metal.spentString, css: metal.coloration">
-
+                    0
+                </div>
+                <div class="energy-per-metal" data-bind="text: energyPerMetal">
                     0
                 </div>
             </div>

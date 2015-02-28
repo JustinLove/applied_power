@@ -56,6 +56,14 @@ define([
   model.metal = metal
   model.energy = energy
 
+  model.energyPerMetal = ko.computed(function() {
+    if (metal.spent() == 0) {
+      return model.formatedRateString(energy.currentLoss())
+    } else {
+      return model.formatedRateString(energy.currentLoss() / metal.spent())
+    }
+  })
+
   return {
     ready: function() {
       console.log('ready')
