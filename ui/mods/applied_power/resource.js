@@ -1,33 +1,25 @@
-define(['applied_power/series'], function(series) {
+define([], function() {
   return function(resource) {
-    resource.scale = ko.computed(function() {
-      if (resource.loss) {
-        return Math.max(resource.min, resource.currentGain() * 2, resource.currentLoss(),
-          resource.gain.max() * 2, resource.loss.max())
+
+    resource.unlimitedLoss = ko.computed(function() {
+      if (resource.limitingFactor() != 0) {
+        return resource.currentLoss() / resource.limitingFactor()
       } else {
-        return Math.max(resource.min, resource.currentGain() * 2, resource.currentLoss())
+        return resource.currentLoss()
       }
     })
+    resource.unlimitedLossString = ko.computed(function() {
+      return model.formatedRateString(resource.unlimitedLoss())
+    })
 
-    var linearTransform = function(x) {
-      return x / resource.scale()
-    }
+    resource.spent = ko.computed(function() {
+      var available = resource.currentGain() + resource.current()
+      return Math.min(resource.currentLoss(), available)
+    })
+    resource.spentString = ko.computed(function() {
+      return model.formatedRateString(resource.spent())
+    })
 
-    // likely overwritten
-    var logScale = 1000
-    var transform = linearTransform 
-    resource.transform = transform
-
-    var percent = function(x) {
-      return ko.computed(function() {
-        var d = transform(x())
-        if (d < 0) {return 0}
-        return '' + (100 * d) + '%'
-      })
-    }
-
-    resource.gain = series(resource.currentGain)
-    resource.loss = series(resource.currentLoss)
     resource.ratio = ko.computed(function() {
       if (resource.current() > 1) {
         return 1
@@ -39,6 +31,7 @@ define(['applied_power/series'], function(series) {
     resource.efficiency = ko.computed(function() {
       return '' + Math.round(100 * resource.ratio()) + '%'
     })
+
     resource.colorCalculated = ko.computed(function() {
       var storage = resource.current() / resource.max()
       var denom = resource.currentLoss()
@@ -57,25 +50,26 @@ define(['applied_power/series'], function(series) {
       }
     })
 
-    resource.spent = ko.computed(function() {
-      var available = resource.currentGain() + resource.current()
-      return Math.min(resource.currentLoss(), available)
-    })
-    resource.spentString = ko.computed(function() {
-      return model.formatedRateString(resource.spent())
+    resource.scale = ko.computed(function() {
+      return Math.max(resource.min, resource.currentGain(), resource.unlimitedLoss())
     })
 
-    resource.unlimitedLoss = ko.computed(function() {
-      if (resource.limitingFactor() != 0) {
-        return resource.currentLoss() / resource.limitingFactor()
-      } else {
-        return resource.currentLoss()
-      }
-    })
+    var linearTransform = function(x) {
+      return x / resource.scale()
+    }
 
-    resource.unlimitedLossString = ko.computed(function() {
-      return model.formatedRateString(resource.unlimitedLoss())
-    })
+    // likely overwritten
+    var logScale = 1000
+    var transform = linearTransform 
+    resource.transform = transform
+
+    var percent = function(x) {
+      return ko.computed(function() {
+        var d = transform(x())
+        if (d < 0) {return 0}
+        return '' + (100 * d) + '%'
+      })
+    }
 
     resource.percentUnlimitedLoss = percent(resource.unlimitedLoss)
     resource.percentLoss = percent(resource.currentLoss)
