@@ -58,16 +58,6 @@ define([
   extendResource(metal)
   extendResource(energy)
 
-  var limit = metal.limit = energy.limit = ko.computed(function() {
-    if (metal.ratio() < 1) {
-      return 'metal'
-    } else if (energy.ratio() < 1) {
-      return 'energy'
-    } else {
-      return 'none'
-    }
-  })
-
   model.metal = metal
   model.energy = energy
 
@@ -87,18 +77,6 @@ define([
     var d = metal.transform(model.buildPower())
     if (d < 0) {return 0}
     return '' + (100 * d) + '%'
-  })
-
-  model.appliedPower = ko.computed(function() {
-    if (metal.current() > 1) {
-      return metal.currentLoss()
-    } else {
-      return Math.min(metal.currentLoss(), metal.currentGain())
-    }
-  })
-
-  model.appliedPowerString = ko.computed(function() {
-    return model.formatedRateString(model.appliedPower())
   })
 
   return {

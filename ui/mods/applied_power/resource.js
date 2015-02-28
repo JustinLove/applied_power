@@ -22,9 +22,9 @@ define(['applied_power/series'], function(series) {
     var transform = linearTransform 
     resource.transform = transform
 
-    var percent = function(left, right) {
+    var percent = function(x) {
       return ko.computed(function() {
-        var d = transform(right()) - transform(left())
+        var d = transform(x())
         if (d < 0) {return 0}
         return '' + (100 * d) + '%'
       })
@@ -61,88 +61,16 @@ define(['applied_power/series'], function(series) {
       }
     })
 
-    var zero = function() {return 0}
-    var unit_loss = resource.currentLoss
-    var unit_toStorage = ko.computed(function() {
-      var net = Math.max(0, resource.currentGain() - resource.currentLoss() + resource.shared())
-      return Math.min(net, resource.max() - resource.current())
-    })
-    var unit_toSharing = ko.computed(function() {
-      return Math.max(0, -resource.shared())
-    })
-    var unit_gain = resource.currentGain
-    var unit_fromSharing = ko.computed(function() {
-      return Math.max(0, resource.shared())
-    })
-    var unit_fromStorage = ko.computed(function() {
-      var net = Math.max(0, resource.currentLoss() - resource.currentGain() - resource.shared())
-      return Math.min(net, resource.current())
-    })
-    var unit_spent = ko.computed(function() {
+    resource.spent = ko.computed(function() {
       var available = resource.currentGain() + resource.current()
       return Math.min(resource.currentLoss(), available)
     })
-
-    var unit_rightToStorage = ko.computed(function() {
-      return unit_loss() + unit_toStorage()
-    })
-    var unit_rightToSharing = ko.computed(function() {
-      return unit_loss() + unit_toStorage() + unit_toSharing()
-    })
-    var unit_rightFromSharing = ko.computed(function() {
-      return unit_gain() + unit_fromSharing()
-    })
-    var unit_rightFromStorage = ko.computed(function() {
-      return unit_gain() + unit_fromSharing() + unit_fromStorage()
+    resource.spentString = ko.computed(function() {
+      return model.formatedRateString(resource.spent())
     })
 
-    resource.percentLoss = percent(zero, unit_loss)
-    resource.percentGain = percent(zero, unit_gain)
-    resource.percentSpent = percent(zero, unit_spent)
-
-    resource.bars = [
-      {
-        name: 'bar-range',
-        tooltip: '30s range',
-        left: percent(zero, resource.loss.rangeStart),
-        width: percent(resource.loss.rangeStart, resource.loss.rangeEnd)
-      },
-      {
-        name: 'bar-loss',
-        tooltip: resource.resource + ' expended',
-        left: zero,
-        width: percent(zero, unit_loss)
-      },
-      {
-        name: 'bar-to-storage',
-        tooltip: resource.resource + ' to storage',
-        left: percent(zero, unit_loss),
-        width: percent(unit_loss, unit_rightToStorage)
-      },
-      {
-        name: 'bar-to-sharing',
-        tooltip: resource.resource + ' to allies',
-        left: percent(zero, unit_rightToStorage),
-        width: percent(unit_rightToStorage, unit_rightToSharing)
-      },
-      {
-        name: 'bar-gain',
-        tooltip: resource.resource + ' produced',
-        left: zero,
-        width: percent(zero, unit_gain)
-      },
-      {
-        name: 'bar-from-sharing',
-        tooltip: resource.resource + ' from allies',
-        left: percent(zero, unit_gain),
-        width: percent(unit_gain, unit_rightFromSharing)
-      },
-      {
-        name: 'bar-from-storage',
-        tooltip: resource.resource + ' from storage',
-        left: percent(zero, unit_rightFromSharing),
-        width: percent(unit_rightFromSharing, unit_rightFromStorage)
-      }
-    ]
+    resource.percentLoss = percent(resource.currentLoss)
+    resource.percentGain = percent(resource.currentGain)
+    resource.percentSpent = percent(resource.spent)
   }
 })
