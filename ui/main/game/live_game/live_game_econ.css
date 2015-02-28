@@ -143,9 +143,33 @@
   text-align: center;
   padding-top: 8px;
   z-index: 20;
-  background-color: #444
+  background-color: #444;
+  background-size: cover;
 }
 
+.build-power-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/bot_factory.png);
+}
+
+.metal-supply-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/metal_extractor.png);
+}
+
+.energy-efficiency-block img {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 60%;
+  height: 70%;
+  opacity: 0.4;
+}
+
+.energy-demand-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/fabrication_bot.png);
+}
+.energy-supply-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/energy_plant.png);
+}
 
 .energy-demand-pipe,
 .energy-supply-pipe,
