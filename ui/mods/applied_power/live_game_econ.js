@@ -64,6 +64,16 @@ define([
     }
   })
 
+  model.limit = ko.computed(function() {
+    if (metal.currentLoss() > metal.currentGain()) {
+      return 'limit-metal-supply'
+    } else if (energy.ratio() < 1) {
+      return 'limit-energy-supply'
+    } else {
+      return 'limit-metal-demand'
+    }
+  })
+
   return {
     ready: function() {
       console.log('ready')
