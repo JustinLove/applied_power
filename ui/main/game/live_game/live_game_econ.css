@@ -226,10 +226,13 @@
 }
 
 .energy-supply-flow,
-.effective-applied-energy-flow,
+.effective-applied-energy-flow {
+  background-color: #dd0;
+}
+
 .metal-supply-flow,
 .effective-applied-power-flow {
-  background-color: green;
+  background-color: #488;
 }
 
 .energy-efficiency-block.rate-wasted {
