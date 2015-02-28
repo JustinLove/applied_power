@@ -40,7 +40,7 @@ define([], function() {
       return 'rate-' + resource.judgement(storage, ratio)
     })
 
-    resource.coloration = ko.observable()
+    resource.coloration = ko.observable(resource.colorCalculated())
 
     resource.colorCalculated.subscribe(resource.coloration)
 

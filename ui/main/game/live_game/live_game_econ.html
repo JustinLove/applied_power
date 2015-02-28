@@ -55,7 +55,7 @@
                     Power
                 </div>
                 <div class="ap-number receiveMouse" style="box-shadow: none;"
-                    data-bind="text: metal.spentString">
+                    data-bind="text: metal.spentString, css: metal.coloration">
 
                     0
                 </div>
@@ -70,7 +70,7 @@
               <div class="metal-demand-pipe">
                 <div class="metal-demand-flow" data-bind="style: {height: metal.percentUnlimitedLoss}"></div>
               </div>
-              <div class="energy-efficiency-block">
+              <div class="energy-efficiency-block" data-bind="css: energy.coloration">
                 <img src="coui://ui/main/game/live_game/img/status_bar/icon-status-energy.png">
                 <div class="" data-placement="bottom" data-bind="text: energy.efficiency, tooltip: tooltipEnergyEfficiency">8888%</div>
               </div>
