@@ -96,26 +96,27 @@
         <!--- ENERGY ---->
         <div class="div-energy receiveMouse">
             <div class="contents">
-                <div class="category_icon_energy" data-placement="bottom" data-bind="tooltip: tooltipEnergy">
-                    <img src="img/status_bar/icon-status-energy.png" />
+              <div class="effective-applied-energy-pipe">
+                <div class="effective-applied-energy-flow" data-bind="style: {height: energy.percentSpent}"></div>
+              </div>
+              <div class="storage-block" data-bind="tooltip: 'energy storage'" data-placement="bottom">
+                <div class="storage-fill" data-bind="style: { height: energy.fractionString() }"></div>
+                <div class="storage-number">
+                  <span data-bind="text: energy.currentString">8888</span>
                 </div>
-                <div class="div_status_bar_display" data-placement="bottom" data-bind="tooltip: tooltipEnergyStorage">
-                    <div data-bind="css: { status_bar_frame_red: energyFraction() <= 0, status_bar_frame: true }">
-                        <div class="status_bar_energy" data-bind="style: { width: energyFractionString() }, css: energyTextColorCSS">
-                        </div>
-                    </div>
-                    <div class="status_stats">
-                        <span data-bind="text: currentEnergyString">8888</span>/<span data-bind="    text: maxEnergyString">8888</span>
-                    </div>
-                </div>
-                <div class="div_rate_ctr_cont" data-bind="click: toggleEnergyDisplay">
-                    <div class="div_plusminus_rate_cont">
-                        <div class="rate_stat text_rate color_positive" style="box-shadow: none;" id="Div3" data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+7777</div>
-                        <div class="rate_stat text_rate color_negative" style="box-shadow: none;" id="Div4" data-placement="bottom" data-bind="text: energyLossString, tooltip: tooltipEnergyExpended">-8888</div>
-                    </div>
-                    <div class="div_rate_ctr_overall text_rate" style="box-shadow: none;" data-placement="bottom" data-bind="visible: !displayEnergyAsPercent(), text: energyNetString, css: energyTextColorCSS, tooltip: tooltipNetEnergyProduced">+8888</div>
-                    <div class="div_rate_ctr_overall text_rate" style="box-shadow: none;" data-placement="bottom" data-bind="visible: displayEnergyAsPercent(), text: energyEfficiencyPercString, css: energyTextColorCSS, tooltip: tooltipEnergyEfficiency">(8888%)</div>
-                </div>
+              </div>
+              <div class="energy-supply-pipe">
+                <div class="energy-supply-flow" data-bind="style: {height: energy.percentGain}"></div>
+              </div>
+              <div class="energy-supply-block">
+                <div class="color_positive" style="box-shadow: none;" data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</div>
+              </div>
+              <div class="energy-demand-pipe">
+                <div class="energy-demand-flow" data-bind="style: {height: energy.percentLoss}"></div>
+              </div>
+              <div class="energy-demand-block">
+                <div class="color_negative" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.currentLossString, tooltip: tooltipMetalExpended">-8888</div>
+              </div>
             </div>
         </div>
     </div>

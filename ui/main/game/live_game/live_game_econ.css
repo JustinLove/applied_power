@@ -72,7 +72,7 @@
     margin: 0px auto;
     padding: 16px 0px 0px 0px;
     position: absolute;
-    z-index: 1;
+    z-index: 20;
 }
 
 .category_icon_metal {
@@ -247,6 +247,8 @@
 .build-power-block,
 .energy-efficiency-block,
 .metal-supply-block,
+.energy-demand-block,
+.energy-supply-block,
 .storage-block {
   display: inline-block;
   width: 30px;
@@ -260,6 +262,8 @@
 
 .build-power-block,
 .energy-efficiency-block,
+.energy-demand-block,
+.energy-supply-block,
 .metal-supply-block {
   font-size: 12px;
   text-align: center;
@@ -267,6 +271,10 @@
   z-index: 20;
 }
 
+
+.energy-demand-pipe,
+.energy-supply-pipe,
+.effective-applied-energy-pipe,
 .metal-demand-pipe,
 .effective-build-power-pipe,
 .metal-supply-pipe,
@@ -277,6 +285,9 @@
   position: relative;
 }
 
+.energy-demand-flow,
+.energy-supply-flow,
+.effective-applied-energy-flow,
 .metal-demand-flow,
 .effective-build-power-flow,
 .metal-supply-flow,
@@ -291,21 +302,28 @@
 }
 
 .metal-demand-flow {
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .effective-build-power-flow {
   width: 500%;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   z-index: 10;
 }
 
-.metal-supply-flow {
-  background-color: green;
+.energy-demand-flow {
+  right: 0;
+  width: 500%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  z-index: 10;
 }
 
+.energy-supply-flow,
+.effective-applied-energy-flow,
+.metal-supply-flow,
 .effective-applied-power-flow {
   background-color: green;
 }
