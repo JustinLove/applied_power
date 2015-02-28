@@ -1,8 +1,4 @@
 define(['applied_power/series'], function(series) {
-  var tickColor = function(weight) {
-    return 'rgba(255, 255, 255, ' + weight + ')'
-  }
-
   return function(resource) {
     resource.scale = ko.computed(function() {
       if (resource.loss) {
@@ -69,6 +65,19 @@ define(['applied_power/series'], function(series) {
       return model.formatedRateString(resource.spent())
     })
 
+    resource.unlimitedLoss = ko.computed(function() {
+      if (resource.limitingFactor() != 0) {
+        return resource.currentLoss() / resource.limitingFactor()
+      } else {
+        return resource.currentLoss()
+      }
+    })
+
+    resource.unlimitedLossString = ko.computed(function() {
+      return model.formatedRateString(resource.unlimitedLoss())
+    })
+
+    resource.percentUnlimitedLoss = percent(resource.unlimitedLoss)
     resource.percentLoss = percent(resource.currentLoss)
     resource.percentGain = percent(resource.currentGain)
     resource.percentSpent = percent(resource.spent)

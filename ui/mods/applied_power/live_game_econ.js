@@ -7,30 +7,6 @@ define([
 ) {
   "use strict";
 
-  var metal = {
-    resource: 'metal',
-    current: model.currentMetal,
-    currentString: model.currentMetalString,
-    max: model.maxMetal,
-    currentGain: model.metalGain,
-    currentGainString: model.metalGainString,
-    currentLoss: model.metalLoss,
-    currentLossString: model.metalLossString,
-    net: model.metalNet,
-    netStringStock: model.metalNetString,
-    netStringBfs: ko.computed(function() {
-      return ((model.metalNet() > 0) ? '+' : '') + Math.round(model.metalNet()/10)
-    }),
-    efficiencyString: model.metalEfficiencyPercString,
-    fractionString: ko.computed(function () {
-      return '' + (100 * model.metalFraction()).toFixed(0) + '%';
-    }),
-    shared: model.metalShared,
-    min: 20,
-    tick: 10,
-    judgement: judgement.metal,
-  }
-
   var energy = {
     resource: 'energy',
     current: model.currentEnergy,
@@ -42,42 +18,43 @@ define([
     currentLossString: model.energyLossString,
     net: model.energyNet,
     netStringStock: model.energyNetString,
-    netStringBfs: ko.computed(function() {
-      return ((model.energyNet() > 0) ? '+' : '') + Math.round(model.energyNet()/800)
-    }),
     efficiencyString: model.energyEfficiencyPercString,
     fractionString: ko.computed(function () {
       return '' + (100 * model.energyFraction()).toFixed(0) + '%';
     }),
     shared: model.energyShared,
+    limitingFactor: ko.observable(1),
     min: 2000,
-    tick: 1000,
     judgement: judgement.energy,
   }
 
-  extendResource(metal)
   extendResource(energy)
+
+  var metal = {
+    resource: 'metal',
+    current: model.currentMetal,
+    currentString: model.currentMetalString,
+    max: model.maxMetal,
+    currentGain: model.metalGain,
+    currentGainString: model.metalGainString,
+    currentLoss: model.metalLoss,
+    currentLossString: model.metalLossString,
+    net: model.metalNet,
+    netStringStock: model.metalNetString,
+    efficiencyString: model.metalEfficiencyPercString,
+    fractionString: ko.computed(function () {
+      return '' + (100 * model.metalFraction()).toFixed(0) + '%';
+    }),
+    shared: model.metalShared,
+    limitingFactor: energy.ratio,
+    min: 20,
+    judgement: judgement.metal,
+  }
+
+  extendResource(metal)
 
   model.metal = metal
   model.energy = energy
-
-  model.buildPower = ko.computed(function() {
-    if (energy.ratio() != 0) {
-      return metal.currentLoss() / energy.ratio()
-    } else {
-      return metal.currentLoss()
-    }
-  })
-
-  model.buildPowerString = ko.computed(function() {
-    return model.formatedRateString(model.buildPower())
-  })
-
-  model.buildPowerPercent = ko.computed(function() {
-    var d = metal.transform(model.buildPower())
-    if (d < 0) {return 0}
-    return '' + (100 * d) + '%'
-  })
 
   return {
     ready: function() {
