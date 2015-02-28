@@ -137,7 +137,13 @@
   left: 6px;
   width: 60%;
   height: 70%;
-  opacity: 0.4;
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.energy-efficiency-number {
+  color: black;
+  z-index: 30;
 }
 
 .energy-demand-block {
