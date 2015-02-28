@@ -75,101 +75,12 @@
     z-index: 20;
 }
 
-.category_icon_metal {
-    width:34px;
-    border-left: 1px solid #4D4D4D;
-    padding: 5px 6px 0px;
-}
-
-.category_icon_energy {
-    width:34px;
-    border-left: 1px solid #4D4D4D;
-    padding: 6px 6px 0px;
-    text-align:center;
-}
-
-.div_status_bar_display {
-    margin:10px 6px 0px 0px;
-}
-
-.status_bar_frame {
-    border: 1px solid #D1D1D1;
-    border-radius: 0px;
-    height: 6px;
-    margin: -4px 0px 0px 0px;
-    width: 90px;
-}
-
-.status_bar_frame_narrow {
-    border: 1px solid #D1D1D1;
-    border-radius: 0px;
-    height: 6px;
-    margin: -4px 0px 0px 0px;
-    width: 70px;
-}
-
-.status_bar_frame_red {
-    opacity:.3
-}
-
-.status_bar_metal {
-    height: 100%;
-    width: 75%;
-}
-
-.status_bar_energy {
-    height: 100%;
-    width: 75%;
-}
-
-.status_stats {
-    color: #D1D1D1;
-    font-size: 10px;
-    margin: 0px 0px 0px 0px;
-    text-align: left;
-    width: 100%;
-}
-
-.div_rate_ctr_cont {
-    display: flex;
-    margin: 0px -100px 0px 0px;
-    overflow: hidden;
-}
-
-.div_build_rate_cont {
-    text-align: center;
-}
-
-.div_rate_ctr_overall {
-    width:72px;
-    font-size: 16px;
-    text-align: left;
-    border:1px solid #4D4D4D;
-    border-width:0px 1px;
-    margin: 0px 0px 0px 0px;
-    padding:2px 4px 0px;
-    box-shadow:inset 0px 0px 10px red;
-    -webkit-transition: .3s ease-out;
-}
-
-    .div_rate_ctr_overall:hover {
-        border: 1px solid rgba(30,122,161,1);
-        border-width: 0px 1px;
-        -webkit-transition: none;
-    }
-
-    .div_rate_ctr_overall:active {
-        border: 1px solid rgba(0,179,255,1);
-        border-width:0px 1px;
-        color:#fff;
-    }
-
-.div_rate_ctr_perc_center {
+.ap-number {
     font-size: 16px;
     margin: 0px 0px 0px 0px;
 }
 
-.ap_text {
+.ap-text {
     margin: 1px 0px -4px 0px;
     text-transform: uppercase;
     color: #FFF;
@@ -202,42 +113,6 @@
     text-shadow:0px 0px 20px rgba(0, 191, 255, .5);
 }
 
-.text_rate {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.rate_positive_small {
-    color: #4FFF69;
-}
-
-.rate_negative_small {
-    color: #ff0000;
-}
-
-.div_plusminus_rate_cont {
-    /*height: 30px;*/
-    width: auto;
-    text-align: left;
-    margin: 1px 6px 0px 0px;
-}
-
-.rate_stat {
-    font-size: 10px;
-    margin: 0px 0px -4px 0px;
-}
-
-.div_shared_resources {
-    margin: 0px 0px 0px 12px;
-    border-right:1px solid #4d4d4d;
-}
-
-.shared_resource_icon {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0px 0px 0px -7px;
-}
-
 .tooltip {
     font-weight: normal;
     max-width:none;
@@ -250,12 +125,11 @@
 .energy-demand-block,
 .energy-supply-block,
 .storage-block {
-  display: inline-block;
   width: 30px;
   height: 30px;
   vertical-align: top;
   border: 1px solid;
-  border-radius: 2px;
+  border-radius: 4px;
   border-color: #ccc;
   position: relative;
 }
@@ -269,6 +143,7 @@
   text-align: center;
   padding-top: 8px;
   z-index: 20;
+  background-color: #444
 }
 
 
@@ -279,7 +154,6 @@
 .effective-build-power-pipe,
 .metal-supply-pipe,
 .effective-applied-power-pipe {
-  display: inline-block;
   width: 30px;
   vertical-align: top;
   position: relative;
@@ -336,7 +210,6 @@
   font-size: 9px;
   text-align: center;
   width: 100%;
-  display: block;
 }
 
 .storage-fill {
