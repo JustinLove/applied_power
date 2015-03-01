@@ -3,10 +3,10 @@
   "build": "78071",
   "category": ["in-game", "ui", "economy"],
   "context": "client",
-  "date": "2015/02/24",
+  "date": "2015/02/28",
   "description": "Economy bar that focuses on how much metal is being spent, and what is limiting that spending.",
   "display_name": "Applied Power",
-  "forum": null,
+  "forum": "https://forums.uberent.com/threads/rel-applied-power-0-1-0.68131/",
   "identifier": "com.wondible.pa.applied_power",
   "scenes": {
     "live_game_econ": [
