@@ -22,15 +22,15 @@ Demand are 'pipes', pairs of white lines. Supplies are 'flows', represented by s
 
 ### Left (metal) side:
 
-[Estimated Build Power]-ditto-[Energy Efficiency]-Metal Demand-[Metal Supply]-supply & demand-[Metal Storage]-spent & demand-
+[Estimated Build Power]-ditto-[Energy Efficiency]-Metal Demand-[Metal Supply]-supply & demand-[Metal Storage]-spent & demand-[Build Efficiency]
 
 ### Center:
 
-build-efficiency *Spent Metal* energy-per-metal
+*Spent Metal*
 
 ### Right (energy) side:
 
--spent & demand-[Energy Storage]-supply & demand-[Energy Supply]-demand-[Energy Demand]
+[Energy/Metal]-spent & demand-[Energy Storage]-supply & demand-[Energy Supply]-demand-[Energy Demand]
 
 ## Notable Missing Features
 
