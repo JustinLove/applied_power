@@ -58,9 +58,6 @@
                     data-bind="text: metal.spentString, css: metal.coloration">
                     0
                 </div>
-                <div class="energy-per-metal" data-bind="text: energyPerMetal, tooltip: 'Energy / Metal'" data-placement="bottom">
-                    0
-                </div>
             </div>
         </div>
         <!--- METAL -->
@@ -95,13 +92,16 @@
                 <div class="effective-applied-power-flow" data-bind="style: {height: metal.percentSpent}"></div>
               </div>
               <div class="build-efficiency-block">
-                <div class="" data-placement="bottom" data-bind="text: economyEfficiencyPercString, tooltip: economyEfficiencyTooltip">100%</div>
+                <div class="" data-placement="bottom" data-bind="text: economyEfficiencyPercString, tooltip: economyEfficiencyTooltip">188%</div>
               </div>
             </div>
         </div>
-        <!--- ENERGY ---->
+        <!--- ENERGY -->
         <div class="div-energy receiveMouse">
             <div class="contents">
+              <div class="energy-per-metal-block">
+                <div data-placement="bottom" data-bind="text: energyPerMetal, tooltip: 'Energy / Metal'">188</div>
+              </div>
               <div class="effective-applied-energy-pipe" data-bind="tooltip: 'Effective Energy'" data-placement="bottom">
                 <div class="effective-applied-energy-flow" data-bind="style: {height: energy.percentSpent}"></div>
               </div>

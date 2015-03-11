@@ -97,17 +97,6 @@
     text-shadow: 0px 0px 20px #00B3FF;
 }
 
-.energy-per-metal {
-    font-size: 8px;
-    position: absolute;
-    top: 0;
-    color: #ccc;
-}
-
-.energy-per-metal {
-    right: -10px;
-}
-
 .tooltip {
     font-weight: normal;
     max-width:none;
@@ -120,6 +109,7 @@
 .build-efficiency-block,
 .energy-demand-block,
 .energy-supply-block,
+.energy-per-metal-block,
 .storage-block {
   width: 30px;
   height: 30px;
@@ -135,6 +125,7 @@
 .energy-efficiency-block,
 .energy-demand-block,
 .energy-supply-block,
+.energy-per-metal-block,
 .metal-supply-block {
   font-size: 12px;
   text-align: center;
