@@ -115,13 +115,15 @@
                 <div class="energy-supply-flow" data-bind="style: {height: energy.percentGain}"></div>
               </div>
               <div class="energy-supply-block">
-                <div class="" style="box-shadow: none;" data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</div>
+                <div data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</div>
+                <div class="minor-epm" data-bind="text: energyPerMetalSupply">188</div>
               </div>
               <div class="energy-demand-pipe" data-bind="tooltip: 'Energy Demand'" data-placement="bottom">
                 <div class="energy-demand-flow" data-bind="style: {height: energy.percentLoss}"></div>
               </div>
               <div class="energy-demand-block">
                 <div class="" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.currentLossString, tooltip: 'Energy Demand'">-8888</div>
+                <div class="minor-epm" data-bind="text: energyPerMetalDemand">188</div>
               </div>
             </div>
         </div>

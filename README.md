@@ -32,6 +32,10 @@ Demand are 'pipes', pairs of white lines. Supplies are 'flows', represented by s
 
 [Energy/Metal]-spent & demand-[Energy Storage]-supply & demand-[Energy Supply]-demand-[Energy Demand]
 
+Minor numbers:
+- Energy Supply/Metal Supply: do you have enough energy for the metal you have
+- Energy Demand/Build Power: what you target the supply ratio to
+
 ## Notable Missing Features
 
 Does not account for shared economy.

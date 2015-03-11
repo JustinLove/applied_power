@@ -64,6 +64,22 @@ define([
     }
   })
 
+  model.energyPerMetalSupply = ko.computed(function() {
+    if (metal.currentGain() == 0) {
+      return model.formatedRateString(energy.currentGain())
+    } else {
+      return model.formatedRateString(energy.currentGain() / metal.currentGain())
+    }
+  })
+
+  model.energyPerMetalDemand = ko.computed(function() {
+    if (metal.unlimitedLoss() == 0) {
+      return model.formatedRateString(energy.currentLoss())
+    } else {
+      return model.formatedRateString(energy.currentLoss() / metal.unlimitedLoss())
+    }
+  })
+
   model.limit = ko.computed(function() {
     if (metal.currentLoss() > metal.currentGain()) {
       return 'limit-metal-supply'

@@ -5,3 +5,4 @@
 - Tooltip pass
 - Move build efficiency and energy-per-metal to full blocks
 - POWER -> SPENT
+- Energy-per-metal supply and demand

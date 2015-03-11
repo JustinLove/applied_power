@@ -177,6 +177,12 @@
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/fabrication_aircraft_adv.png);
 }
 
+.minor-epm {
+  line-height: 50%;
+  font-size: 8px;
+  color: #bbb;
+}
+
 .energy-demand-pipe,
 .energy-supply-pipe,
 .effective-applied-energy-pipe,
