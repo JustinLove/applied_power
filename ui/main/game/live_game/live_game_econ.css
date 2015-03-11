@@ -97,16 +97,11 @@
     text-shadow: 0px 0px 20px #00B3FF;
 }
 
-.build-efficiency,
 .energy-per-metal {
     font-size: 8px;
     position: absolute;
     top: 0;
     color: #ccc;
-}
-
-.build-efficiency {
-    left: -10px;
 }
 
 .energy-per-metal {
@@ -122,6 +117,7 @@
 .build-power-block,
 .energy-efficiency-block,
 .metal-supply-block,
+.build-efficiency-block,
 .energy-demand-block,
 .energy-supply-block,
 .storage-block {
@@ -135,6 +131,7 @@
 }
 
 .build-power-block,
+.build-efficiency-block,
 .energy-efficiency-block,
 .energy-demand-block,
 .energy-supply-block,
