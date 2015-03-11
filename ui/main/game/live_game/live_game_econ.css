@@ -158,11 +158,19 @@
   z-index: 30;
 }
 
+.build-efficiency-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/vehicle_factory_adv.png);
+}
+
 .energy-demand-block {
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/fabrication_bot.png);
 }
 .energy-supply-block {
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/energy_plant.png);
+}
+
+.energy-per-metal-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/fabrication_aircraft_adv.png);
 }
 
 .energy-demand-pipe,
