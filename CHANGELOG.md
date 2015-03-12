@@ -1,5 +1,9 @@
 # Applied Power
 
+## 0.2.1
+
+- Fix minor number positioning on windows
+
 ## 0.2.0
 
 - Tooltip pass

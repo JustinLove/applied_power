@@ -137,6 +137,7 @@
   z-index: 20;
   background-color: #444;
   background-size: cover;
+  line-height: 1;
 }
 
 .build-power-block {
