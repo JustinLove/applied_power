@@ -14,9 +14,9 @@ Inspired by Elodea's [Easy cookie cutter planetary annihilation build order #7 D
 - Metal and energy arranged in pipelines
 - Limiting factor highlighted
 
-## Elements (2015-03-10)
+## Elements (2015-03-29)
 
-The element that is currently limiting spent metal/applied build power is highlighted with a red background and yellow outline.
+The element that is currently limiting spent metal/applied build power is highlighted with yellow outline.  A green background suggests "do more of this", red "do less of this"
 
 Demand are 'pipes', pairs of white lines. Supplies are 'flows', represented by solid colors.
 

@@ -267,12 +267,19 @@
   background-color: red;
 }
 
-.limit-metal-supply .metal-supply-block,
-.limit-energy-supply .energy-supply-block,
-.limit-metal-demand .build-power-block {
+.increase-metal-supply .metal-supply-block,
+.increase-energy-supply .energy-supply-block,
+.increase-build-power .build-power-block {
   border-width: 2px;
   border-color: yellow;
-  background-color: red;
+  background-color: #0c0;
+}
+
+.reduce-build-power .build-power-block,
+.reduce-energy-demand .energy-demand-block {
+  border-width: 2px;
+  border-color: yellow;
+  background-color: red 
 }
 
 /****** Storage Section ******/

@@ -1,5 +1,11 @@
 # Applied Power
 
+## 0.3.0
+
+- Color background for build efficiency
+- Economic limit is now green with yellow boarder (do more of this)
+- Excess spending (resource efficiency < 75%) is red with yellow border (do less of this)
+
 ## 0.2.1
 
 - Fix minor number positioning on windows

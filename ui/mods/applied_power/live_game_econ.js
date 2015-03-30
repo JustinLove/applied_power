@@ -82,11 +82,19 @@ define([
 
   model.limit = ko.computed(function() {
     if (metal.currentLoss() > metal.currentGain()) {
-      return 'limit-metal-supply'
+      if (metal.ratio() < 0.75) {
+        return 'reduce-build-power'
+      } else {
+        return 'increase-metal-supply'
+      }
     } else if (energy.ratio() < 1) {
-      return 'limit-energy-supply'
+      if (model.energyPerMetalDemand() < model.energyPerMetalSupply()) {
+        return 'reduce-energy-demand'
+      } else {
+        return 'increase-energy-supply'
+      }
     } else {
-      return 'limit-metal-demand'
+      return 'increase-build-power'
     }
   })
 
