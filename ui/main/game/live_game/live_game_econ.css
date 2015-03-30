@@ -242,45 +242,29 @@
   background-color: #488;
 }
 
+.build-efficiency-block.rate-wasted,
 .energy-efficiency-block.rate-wasted {
   background-color: #6cf;
 }
 
+.build-efficiency-block.rate-good,
 .energy-efficiency-block.rate-good {
   background-color: #0a0;
 }
 
+.build-efficiency-block.rate-warning,
 .energy-efficiency-block.rate-warning {
   background-color: #dd0;
 }
 
+.build-efficiency-block.rate-danger,
 .energy-efficiency-block.rate-danger {
   background-color: orange;
 }
 
+.build-efficiency-block.rate-critical,
 .energy-efficiency-block.rate-critical {
   background-color: red;
-}
-
-
-.ap-number.rate-wasted {
-  color: #6cf;
-}
-
-.ap-number.rate-good {
-  color: #0a0;
-}
-
-.ap-number.rate-warning {
-  color: #dd0;
-}
-
-.ap-number.rate-danger {
-  color: orange;
-}
-
-.ap-number.rate-critical {
-  color: red;
 }
 
 .limit-metal-supply .metal-supply-block,

@@ -90,6 +90,10 @@ define([
     }
   })
 
+  model.economyEfficiencyPercColoration = ko.computed(function() {
+    return 'rate-' + judgement.efficiency(model.economyEfficiencyPerc()/100.0)
+  })
+
   return {
     ready: function() {
       console.log('ready')

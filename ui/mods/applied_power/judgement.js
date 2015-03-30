@@ -39,6 +39,19 @@ define([], function() {
           return 'critical'
         }
       }
-    }
+    },
+    efficiency: function(ratio) {
+      if (ratio >= 1.0) {
+        return 'wasted'
+      } else if (ratio > 0.75) {
+        return 'good'
+      } else if (ratio > 0.5) {
+        return 'warning'
+      } else if (ratio > 0.33) {
+        return 'danger'
+      } else {
+        return 'critical'
+      }
+    },
   }
 })
