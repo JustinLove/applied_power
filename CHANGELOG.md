@@ -5,6 +5,7 @@
 - Color background for build efficiency
 - Economic limit is now green with yellow boarder (do more of this)
 - Excess spending (resource efficiency < 75%) is red with yellow border (do less of this)
+- Bottom align flows
 
 ## 0.2.1
 

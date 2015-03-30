@@ -204,23 +204,17 @@
 .metal-supply-flow,
 .effective-applied-power-flow {
   position: absolute;
-  top: 0;
   bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  position: absolute;
   width: 100%;
 }
 
 .metal-demand-flow {
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
 }
 
 .effective-build-power-flow {
   width: 500%;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
   z-index: 10;
 }
 
@@ -228,7 +222,6 @@
   right: 0;
   width: 500%;
   border-top: 1px solid white;
-  border-bottom: 1px solid white;
   z-index: 10;
 }
 

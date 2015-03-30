@@ -18,7 +18,7 @@ Inspired by Elodea's [Easy cookie cutter planetary annihilation build order #7 D
 
 The element that is currently limiting spent metal/applied build power is highlighted with yellow outline.  A green background suggests "do more of this", red "do less of this"
 
-Demand are 'pipes', pairs of white lines. Supplies are 'flows', represented by solid colors.
+Supplies are solid colors, think of them as the flow between blocks.  Demands are thin white lines, think of them as pipes that limit how much you can move.
 
 ### Left (metal) side:
 
