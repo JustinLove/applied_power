@@ -4,8 +4,9 @@
 
 - Color background for build efficiency
 - Economic limit is now green with yellow boarder (do more of this)
-- Excess spending (resource efficiency < 75%) is red with yellow border (do less of this)
+- Excess spending (resource efficiency < 75%) has a red X with yellow border on the box (do less of this)
 - Bottom align flows
+- Removed background icons from build efficiency and effective energy per metal
 
 ## 0.2.1
 

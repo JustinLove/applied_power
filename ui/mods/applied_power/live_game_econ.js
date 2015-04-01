@@ -88,7 +88,9 @@ define([
         return 'increase-metal-supply'
       }
     } else if (energy.ratio() < 1) {
-      if (model.energyPerMetalDemand() < model.energyPerMetalSupply()) {
+      if (energy.ratio() < 0.75) {
+        return 'reduce-energy-demand'
+      } else if (model.energyPerMetalDemand() < model.energyPerMetalSupply()) {
         return 'reduce-energy-demand'
       } else {
         return 'increase-energy-supply'

@@ -144,6 +144,10 @@
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/bot_factory.png);
 }
 
+.build-power-number {
+  z-index: 30;
+}
+
 .metal-supply-block {
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/metal_extractor.png);
 }
@@ -156,6 +160,10 @@
   height: 70%;
   opacity: 0.9;
   z-index: -1;
+}
+
+.energy-efficiency-number {
+  z-index: 30;
 }
 
 .build-efficiency-number,
@@ -265,7 +273,17 @@
 .reduce-energy-demand .energy-demand-block {
   border-width: 2px;
   border-color: yellow;
-  background-color: red 
+}
+
+.reduce-build-power .build-power-block::before,
+.reduce-energy-demand .energy-demand-block::before {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  font-size: 30px;
+  color: red;
+  content: "X";
+  z-index: -1;
 }
 
 /****** Storage Section ******/
