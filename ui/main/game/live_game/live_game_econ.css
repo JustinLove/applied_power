@@ -49,15 +49,13 @@
     }
 
 .div-metal .contents {
-    margin-left: 35px; 
     display: flex;
+    justify-content: flex-end;
 }
 
 .div-energy .contents {
-    margin-right: 0px;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 94px;
+    justify-content: flex-start;
 }
 
 .div-ap {
