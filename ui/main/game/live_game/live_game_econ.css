@@ -158,7 +158,7 @@
   left: 6px;
   width: 60%;
   height: 70%;
-  opacity: 0.9;
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -168,7 +168,6 @@
 
 .build-efficiency-number,
 .energy-efficiency-number {
-  color: black;
   z-index: 30;
 }
 
@@ -228,7 +227,7 @@
 
 .energy-supply-flow,
 .effective-applied-energy-flow {
-  background-color: #dd0;
+  background-color: #cc0;
 }
 
 .metal-supply-flow,
@@ -238,27 +237,27 @@
 
 .build-efficiency-block.rate-wasted,
 .energy-efficiency-block.rate-wasted {
-  background-color: #6cf;
+  background-color: #268;
 }
 
 .build-efficiency-block.rate-good,
 .energy-efficiency-block.rate-good {
-  background-color: #0a0;
+  background-color: #060;
 }
 
 .build-efficiency-block.rate-warning,
 .energy-efficiency-block.rate-warning {
-  background-color: #dd0;
+  background-color: #880;
 }
 
 .build-efficiency-block.rate-danger,
 .energy-efficiency-block.rate-danger {
-  background-color: orange;
+  background-color: #a60;
 }
 
 .build-efficiency-block.rate-critical,
 .energy-efficiency-block.rate-critical {
-  background-color: red;
+  background-color: #a00;
 }
 
 .increase-metal-supply .metal-supply-block,

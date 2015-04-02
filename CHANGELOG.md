@@ -1,5 +1,9 @@
 # Applied Power
 
+## 0.4.0
+
+- Darken status colors so limits stand out more
+
 ## 0.3.0
 
 - Color background for build efficiency
