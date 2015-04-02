@@ -104,6 +104,29 @@ define([
     return 'rate-' + judgement.efficiency(model.economyEfficiencyPerc()/100.0)
   })
 
+  model.radarEfficiencyRatio = ko.computed(function() {
+    if (energy.current() > 0) {
+      return 1.0
+    } else if (energy.ratio() > 0.9) {
+      return (energy.ratio() - 0.9) * 10
+    } else {
+      return 0
+    }
+  })
+
+  model.radarEfficiencyPercString = ko.computed(function () {
+    var ePerc = Number(model.radarEfficiencyRatio() * 100).toFixed(0);
+    if (ePerc > 999) {
+      return '--';
+    } else {
+      return '' + ePerc + '%';
+    }
+  });
+
+  model.radarEfficiencyPercColoration = ko.computed(function() {
+    return 'rate-' + judgement.efficiency(model.radarEfficiencyRatio())
+  })
+
   return {
     ready: function() {
       console.log('ready')

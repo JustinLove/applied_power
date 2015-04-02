@@ -3,6 +3,7 @@
 ## 0.4.0
 
 - Darken status colors so limits stand out more
+- Radar strength block
 
 ## 0.3.0
 

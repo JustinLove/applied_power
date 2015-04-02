@@ -114,6 +114,7 @@
 .energy-demand-block,
 .energy-supply-block,
 .energy-per-metal-block,
+.radar-efficiency-block,
 .storage-block {
   width: 30px;
   height: 30px;
@@ -130,6 +131,7 @@
 .energy-demand-block,
 .energy-supply-block,
 .energy-per-metal-block,
+.radar-efficiency-block,
 .metal-supply-block {
   font-size: 12px;
   text-align: center;
@@ -162,10 +164,7 @@
   z-index: -1;
 }
 
-.energy-efficiency-number {
-  z-index: 30;
-}
-
+.energy-efficiency-number,
 .build-efficiency-number,
 .energy-efficiency-number {
   z-index: 30;
@@ -176,6 +175,9 @@
 }
 .energy-supply-block {
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/energy_plant.png);
+}
+.radar-efficiency-block {
+  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/radar.png);
 }
 
 .minor-epm {
@@ -235,26 +237,31 @@
   background-color: #488;
 }
 
+.radar-efficiency-block.rate-wasted,
 .build-efficiency-block.rate-wasted,
 .energy-efficiency-block.rate-wasted {
   background-color: #268;
 }
 
+.radar-efficiency-block.rate-good,
 .build-efficiency-block.rate-good,
 .energy-efficiency-block.rate-good {
   background-color: #060;
 }
 
+.radar-efficiency-block.rate-warning,
 .build-efficiency-block.rate-warning,
 .energy-efficiency-block.rate-warning {
   background-color: #880;
 }
 
+.radar-efficiency-block.rate-danger,
 .build-efficiency-block.rate-danger,
 .energy-efficiency-block.rate-danger {
   background-color: #a60;
 }
 
+.radar-efficiency-block.rate-critical,
 .build-efficiency-block.rate-critical,
 .energy-efficiency-block.rate-critical {
   background-color: #a00;
