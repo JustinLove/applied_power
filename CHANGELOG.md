@@ -4,6 +4,7 @@
 
 - Darken status colors so limits stand out more
 - Radar strength block
+- Small numbers in flows - net amount now present
 
 ## 0.3.0
 

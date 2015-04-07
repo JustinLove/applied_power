@@ -184,6 +184,20 @@
   color: #bbb;
 }
 
+.energy-demand-number,
+.energy-supply-number,
+.effective-applied-energy-number,
+.metal-demand-number,
+.effective-build-power-number,
+.metal-supply-number,
+.effective-applied-power-number {
+  position: absolute;
+  bottom: 0;
+  font-size: 9px;
+  text-align: center;
+  width: 100%;
+}
+
 .energy-demand-pipe,
 .energy-supply-pipe,
 .effective-applied-energy-pipe,

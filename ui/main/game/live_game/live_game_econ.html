@@ -68,6 +68,9 @@
               </div>
               <div class="metal-demand-pipe" data-bind="tooltip: 'Build Power'" data-placement="bottom">
                 <div class="metal-demand-flow" data-bind="style: {height: metal.percentUnlimitedLoss}"></div>
+                <div class="metal-demand-number">
+                  <span data-bind="text: metal.unlimitedLossString">8888</span>
+                </div>
               </div>
               <div class="energy-efficiency-block" data-bind="css: energy.coloration">
                 <img src="coui://ui/main/game/live_game/img/status_bar/icon-status-energy.png">
@@ -75,12 +78,18 @@
               </div>
               <div class="effective-build-power-pipe" data-bind="tooltip: 'Metal Demand'" data-placement="bottom">
                 <div class="effective-build-power-flow" data-bind="style: {height: metal.percentLoss}"></div>
+                <div class="effective-build-power-number">
+                  <span data-bind="text: metal.currentLossString">8888</span>
+                </div>
               </div>
               <div class="metal-supply-block">
                 <div class="" style="box-shadow: none;" data-placement="bottom" data-bind="text: metalGainString, tooltip: tooltipMetalProduced">+8888</div>
               </div>
               <div class="metal-supply-pipe" data-bind="tooltip: 'Supply &amp; Demand'" data-placement="bottom">
                 <div class="metal-supply-flow" data-bind="style: {height: metal.percentGain}"></div>
+                <div class="metal-supply-number">
+                  <span data-bind="text: metal.currentGainString">8888</span>
+                </div>
               </div>
               <div class="storage-block" data-bind="tooltip: 'Metal Storage'" data-placement="bottom">
                 <div class="storage-fill" data-bind="style: { height: metal.fractionString() }"></div>
@@ -90,6 +99,9 @@
               </div>
               <div class="effective-applied-power-pipe" data-bind="tooltip: 'Effective Metal'" data-placement="bottom">
                 <div class="effective-applied-power-flow" data-bind="style: {height: metal.percentSpent}"></div>
+                <div class="effective-applied-power-number">
+                  <span data-bind="text: metal.netStringStock">8888</span>
+                </div>
               </div>
               <div class="build-efficiency-block" data-bind="css: economyEfficiencyPercColoration">
                 <div class="build-efficiency-number" data-placement="bottom" data-bind="text: economyEfficiencyPercString, tooltip: economyEfficiencyTooltip">188%</div>
@@ -107,6 +119,9 @@
               </div>
               <div class="effective-applied-energy-pipe" data-bind="tooltip: 'Effective Energy'" data-placement="bottom">
                 <div class="effective-applied-energy-flow" data-bind="style: {height: energy.percentSpent}"></div>
+                <div class="effective-applied-energy-number">
+                  <span data-bind="text: energy.netStringStock">8888</span>
+                </div>
               </div>
               <div class="storage-block" data-bind="tooltip: 'Energy Storage'" data-placement="bottom">
                 <div class="storage-fill" data-bind="style: { height: energy.fractionString() }"></div>
@@ -116,6 +131,9 @@
               </div>
               <div class="energy-supply-pipe" data-bind="tooltip: 'Supply &amp; Demand'" data-placement="bottom">
                 <div class="energy-supply-flow" data-bind="style: {height: energy.percentGain}"></div>
+                <div class="energy-supply-number">
+                  <span data-bind="text: energy.currentGainString">8888</span>
+                </div>
               </div>
               <div class="energy-supply-block">
                 <div data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</div>
@@ -123,9 +141,12 @@
               </div>
               <div class="energy-demand-pipe" data-bind="tooltip: 'Energy Demand'" data-placement="bottom">
                 <div class="energy-demand-flow" data-bind="style: {height: energy.percentLoss}"></div>
+                <div class="energy-demand-number">
+                  <span data-bind="text: energy.currentLossString">8888</span>
+                </div>
               </div>
               <div class="energy-demand-block">
-                <div class="energy-demand-number" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.currentLossString, tooltip: 'Energy Demand'">-8888</div>
+                <div class="energy-demand-number-big" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.currentLossString, tooltip: 'Energy Demand'">-8888</div>
                 <div class="minor-epm" data-bind="text: energyPerMetalDemand">188</div>
               </div>
             </div>
