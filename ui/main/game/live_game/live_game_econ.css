@@ -178,12 +178,6 @@
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/radar.png);
 }
 
-.minor-epm {
-  line-height: 50%;
-  font-size: 8px;
-  color: #bbb;
-}
-
 .energy-demand-number,
 .energy-supply-number,
 .effective-applied-energy-number,

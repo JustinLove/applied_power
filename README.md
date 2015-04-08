@@ -14,7 +14,7 @@ Inspired by Elodea's [Easy cookie cutter planetary annihilation build order #7 D
 - Metal and energy arranged in pipelines
 - Limiting factor highlighted
 
-## Elements (2015-04-02)
+## Elements (2015-04-08)
 
 The element that is currently limiting spent metal/applied build power is highlighted with yellow outline.  A green background suggests "do more of this", red X "do less of this"
 
@@ -30,9 +30,8 @@ Supplies are solid colors, think of them as the flow between blocks.  Demands ar
 
 ### Right (energy) side:
 
-[Energy/Metal][Radar Strength(vanilla)]-spent & demand-[Energy Storage]-supply & demand-[Energy Supply]-demand-[Energy Demand]
+[Energy Spent/Metal Spent][Radar Strength(vanilla)]-spent & demand-[Energy Storage]-supply & demand-[Energy Supply/Metal Supply]-demand-[Energy Demand/Metal Demand]
 
-Minor numbers:
 - Energy Supply/Metal Supply: do you have enough energy for the metal you have
 - Energy Demand/Build Power: what you target the supply ratio to
 

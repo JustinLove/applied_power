@@ -132,22 +132,20 @@
               <div class="energy-supply-pipe" data-bind="tooltip: 'Supply &amp; Demand'" data-placement="bottom">
                 <div class="energy-supply-flow" data-bind="style: {height: energy.percentGain}"></div>
                 <div class="energy-supply-number">
-                  <span data-bind="text: energy.currentGainString">8888</span>
+                  <span data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</span>
                 </div>
               </div>
               <div class="energy-supply-block">
-                <div data-placement="bottom" data-bind="text: energyGainString, tooltip: tooltipEnergyProduced">+8888</div>
-                <div class="minor-epm" data-bind="text: energyPerMetalSupply">188</div>
+                <div class="epm-supply-number" data-bind="text: energyPerMetalSupply">188</div>
               </div>
               <div class="energy-demand-pipe" data-bind="tooltip: 'Energy Demand'" data-placement="bottom">
                 <div class="energy-demand-flow" data-bind="style: {height: energy.percentLoss}"></div>
                 <div class="energy-demand-number">
-                  <span data-bind="text: energy.currentLossString">8888</span>
+                  <span class="energy-demand-number-big" data-bind="text: energy.currentLossString">-8888</span>
                 </div>
               </div>
               <div class="energy-demand-block">
-                <div class="energy-demand-number-big" style="box-shadow: none;" data-placement="bottom" data-bind="text: energy.currentLossString, tooltip: 'Energy Demand'">-8888</div>
-                <div class="minor-epm" data-bind="text: energyPerMetalDemand">188</div>
+                <div class="epm-demand-number" data-bind="text: energyPerMetalDemand">188</div>
               </div>
             </div>
         </div>

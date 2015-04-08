@@ -5,6 +5,7 @@
 - Darken status colors so limits stand out more
 - Radar strength block
 - Small numbers in flows - net amount now present
+- EPM moved to major numbers in supply/demand blocks
 
 ## 0.3.0
 
