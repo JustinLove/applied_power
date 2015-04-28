@@ -12,12 +12,12 @@ define([], function() {
       return model.formatedRateString(resource.unlimitedLoss())
     })
 
-    resource.spent = ko.computed(function() {
+    resource.spending = ko.computed(function() {
       var available = resource.currentGain() + resource.current()
       return Math.min(resource.currentLoss(), available)
     })
-    resource.spentString = ko.computed(function() {
-      return model.formatedRateString(resource.spent())
+    resource.spendingString = ko.computed(function() {
+      return model.formatedRateString(resource.spending())
     })
 
     resource.ratio = ko.computed(function() {
@@ -74,6 +74,6 @@ define([], function() {
     resource.percentUnlimitedLoss = percent(resource.unlimitedLoss)
     resource.percentLoss = percent(resource.currentLoss)
     resource.percentGain = percent(resource.currentGain)
-    resource.percentSpent = percent(resource.spent)
+    resource.percentSpending = percent(resource.spending)
   }
 })
