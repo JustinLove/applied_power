@@ -2,10 +2,12 @@ define([
   'applied_power/resource',
   'applied_power/judgement',
   'applied_power/accumulator',
+  'applied_power/persist',
 ], function(
   extendResource,
   judgement,
-  accumulator
+  accumulator,
+  persist
 ) {
   "use strict";
 
@@ -137,6 +139,7 @@ define([
   return {
     ready: function() {
       console.log('ready')
+      persist.enableStorage('test', model.metalSpent)
       ko.applyBindings(model)
     },
     metal: metal,

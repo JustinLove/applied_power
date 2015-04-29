@@ -6,16 +6,17 @@ define([], function() {
     var update = function() {
       var t2 = new Date().getTime()
       var dt = t2 - ac.time
-      ac(ac() + ac.rate * dt / 1000)
+      var nextValue = ac() + ac.rate * dt / 1000
       ac.rate = rate()
       ac.time = t2
+      ac(nextValue)
     }
     rate.subscribe(update)
-    var tick = function() {
+    ac.tick = function() {
       update()
-      setTimeout(tick, 1000)
+      setTimeout(ac.tick, 1000)
     }
-    tick()
+    ac.tick()
     return ac
   }
 })
