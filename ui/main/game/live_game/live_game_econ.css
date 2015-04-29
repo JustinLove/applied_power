@@ -117,6 +117,8 @@
   width: 30px;
   height: 30px;
   vertical-align: top;
+  color: white;
+  text-shadow: black 0 0 2px, black 0 0 5px, black 0 0 20px;
   border: 1px solid;
   border-radius: 4px;
   border-color: #ccc;
@@ -190,6 +192,8 @@
   font-size: 9px;
   text-align: center;
   width: 100%;
+  text-shadow: black 0 0 1px, black 0 0 2px;
+  z-index: 40;
 }
 
 .energy-demand-pipe,
@@ -326,4 +330,5 @@
 
 .storage-number {
   color: black;
+  text-shadow: white 0 0 5px;
 }
