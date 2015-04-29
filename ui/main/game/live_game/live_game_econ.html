@@ -55,7 +55,7 @@
                     Spent
                 </div>
                 <div class="ap-number receiveMouse" style="box-shadow: none;"
-                    data-bind="text: metal.spendingString">
+                    data-bind="text: metalSpentString">
                     0
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="effective-applied-power-pipe" data-bind="tooltip: 'Effective Metal'" data-placement="bottom">
-                <div class="effective-applied-power-flow" data-bind="style: {height: metal.percentSpent}"></div>
+                <div class="effective-applied-power-flow" data-bind="style: {height: metal.percentSpending}"></div>
                 <div class="effective-applied-power-number">
                   <span data-bind="text: metal.netStringStock">8888</span>
                 </div>
@@ -118,7 +118,7 @@
                 <div class="radar-efficiency-number" data-placement="bottom" data-bind="text: radarEfficiencyPercString, tooltip: 'Radar'">188%</div>
               </div>
               <div class="effective-applied-energy-pipe" data-bind="tooltip: 'Effective Energy'" data-placement="bottom">
-                <div class="effective-applied-energy-flow" data-bind="style: {height: energy.percentSpent}"></div>
+                <div class="effective-applied-energy-flow" data-bind="style: {height: energy.percentSpending}"></div>
                 <div class="effective-applied-energy-number">
                   <span data-bind="text: energy.netStringStock">8888</span>
                 </div>

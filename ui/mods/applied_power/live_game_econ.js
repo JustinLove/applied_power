@@ -1,9 +1,11 @@
 define([
   'applied_power/resource',
   'applied_power/judgement',
+  'applied_power/accumulator',
 ], function(
   extendResource,
-  judgement
+  judgement,
+  accumulator
 ) {
   "use strict";
 
@@ -125,6 +127,11 @@ define([
 
   model.radarEfficiencyPercColoration = ko.computed(function() {
     return 'rate-' + judgement.efficiency(model.radarEfficiencyRatio())
+  })
+
+  model.metalSpent = accumulator(metal.spending)
+  model.metalSpentString = ko.computed(function() {
+    return model.formatedRateString(model.metalSpent())
   })
 
   return {
