@@ -180,22 +180,6 @@
   background-image: url(coui://ui/main/game/live_game/img/build_bar/units/radar.png);
 }
 
-.energy-demand-number,
-.energy-supply-number,
-.effective-applied-energy-number,
-.metal-demand-number,
-.effective-build-power-number,
-.metal-supply-number,
-.effective-applied-power-number {
-  position: absolute;
-  bottom: 0;
-  font-size: 9px;
-  text-align: center;
-  width: 100%;
-  text-shadow: black 0 0 1px, black 0 0 2px;
-  z-index: 40;
-}
-
 .energy-per-metal-supply-bar,
 .energy-per-metal-demand-bar,
 .energy-per-metal-bar {

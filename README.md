@@ -24,7 +24,7 @@ Supplies are solid colors, think of them as the flow between blocks.  Demands ar
 
 ### Left (metal) side:
 
-[Estimated Build Power]-ditto-[Energy Efficiency]-Metal Demand-[Metal Supply]-supply & demand-[Metal Storage]-spent & demand-[Build Efficiency]
+[Estimated Build Power]-ditto-[Energy Efficiency]-Metal Demand-[Metal Supply]-supply & demand-[Metal Storage]-spending & demand-[Build Efficiency]
 
 ### Center:
 
@@ -32,10 +32,7 @@ Supplies are solid colors, think of them as the flow between blocks.  Demands ar
 
 ### Right (energy) side:
 
-[Energy Spending/Metal Spending][Radar Strength(vanilla)]-spending & demand-[Energy Storage]-supply & demand-[Energy Supply/Metal Supply]-demand-[Energy Demand/Metal Demand]
-
-- Energy Supply/Metal Supply: do you have enough energy for the metal you have
-- Energy Demand/Build Power: what you target the supply ratio to
+[Energy Spending/Metal Spending][Radar Strength(vanilla)]-spending & demand-[Energy Storage]-supply & demand-[Energy Supply]-demand-[Energy Demand]
 
 ### Energy Spending/Metal Spending
 

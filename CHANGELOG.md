@@ -5,6 +5,8 @@
 - Spent is cumulative total instead of per-second
 - Visibility pass on numbers
 - First pass EPM visualization
+- Major energy numbers are back to basic supply and demand
+- Small numbers removed.
 
 ## 0.4.0
 
