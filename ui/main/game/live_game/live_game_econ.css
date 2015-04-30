@@ -196,6 +196,32 @@
   z-index: 40;
 }
 
+.energy-per-metal-supply-bar,
+.energy-per-metal-demand-bar,
+.energy-per-metal-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.energy-per-metal-number {
+  position: relative;
+  z-index: 40;
+}
+
+.energy-per-metal-supply-bar {
+  background-color: #8b0;
+  z-index: 21;
+}
+.energy-per-metal-demand-bar {
+  border-top: 1px solid white;
+  z-index: 30;
+}
+.energy-per-metal-bar {
+  border-top: 1px solid red;
+  z-index: 29;
+}
+
 .energy-demand-pipe,
 .energy-supply-pipe,
 .effective-applied-energy-pipe,

@@ -37,6 +37,18 @@ Supplies are solid colors, think of them as the flow between blocks.  Demands ar
 - Energy Supply/Metal Supply: do you have enough energy for the metal you have
 - Energy Demand/Build Power: what you target the supply ratio to
 
+### Energy Spending/Metal Spending
+
+This has become a rather dense display.  The number represents the title: the ratio of energy per metal spending.
+
+The background represents three numbers
+
+- Energy Spending/Metal Spending (number displayed): red line.  Might be hidden by white line
+- Energy Demand/Build Power: white line
+- Energy Supply/Metal Supply: solid color
+
+The scale is max of the three values; if the solid color is full, your ratio is good.  If it starts to fall, your energy supply is falling behind your available metal or spending. A healthy economy has the white line and solid color near the top of the box. If the red line appears, you are wasting energy because of a metal shortage.
+
 ## Notable Missing Features
 
 Does not account for shared economy.

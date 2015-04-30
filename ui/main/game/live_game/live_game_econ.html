@@ -112,7 +112,10 @@
         <div class="div-energy receiveMouse">
             <div class="contents">
               <div class="energy-per-metal-block">
-                <div data-placement="bottom" data-bind="text: energyPerMetal, tooltip: 'Energy / Metal'">188</div>
+                <div class="energy-per-metal-supply-bar" data-bind="style: {height: percentEPMSupply}"></div>
+                <div class="energy-per-metal-demand-bar" data-bind="style: {height: percentEPMDemand}"></div>
+                <div class="energy-per-metal-bar" data-bind="style: {height: percentEPM}"></div>
+                <div class="energy-per-metal-number" data-placement="bottom" data-bind="text: energyPerMetal, tooltip: 'Energy / Metal'">188</div>
               </div>
               <div class="radar-efficiency-block" data-bind="css: radarEfficiencyPercColoration">
                 <div class="radar-efficiency-number" data-placement="bottom" data-bind="text: radarEfficiencyPercString, tooltip: 'Radar'">188%</div>

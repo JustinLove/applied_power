@@ -4,6 +4,7 @@
 
 - Spent is cumulative total instead of per-second
 - Visibility pass on numbers
+- First pass EPM visualization
 
 ## 0.4.0
 

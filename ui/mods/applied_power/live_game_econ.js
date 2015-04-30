@@ -84,6 +84,25 @@ define([
     }
   })
 
+  var epmScale = ko.computed(function() {
+    return Math.max(
+      model.energyPerMetalSupply(),
+      model.energyPerMetalDemand(),
+      model.energyPerMetal())
+  })
+
+  var epmPercent = function(x) {
+    return ko.computed(function() {
+      var d = x() / epmScale()
+      if (d < 0) {return 0}
+      return '' + (100 * d) + '%'
+    })
+  }
+
+  model.percentEPMSupply = epmPercent(model.energyPerMetalSupply)
+  model.percentEPMDemand = epmPercent(model.energyPerMetalDemand)
+  model.percentEPM = epmPercent(model.energyPerMetal)
+
   model.limit = ko.computed(function() {
     if (metal.currentLoss() > metal.currentGain()) {
       if (metal.ratio() < 0.75) {
