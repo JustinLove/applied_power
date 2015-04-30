@@ -1,5 +1,10 @@
 # Applied Power
 
+## 0.5.0
+
+- Spent is cumulative total instead of per-second
+- Visibility pass on numbers
+
 ## 0.4.0
 
 - Darken status colors so limits stand out more

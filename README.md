@@ -10,11 +10,13 @@ Effectively early access.  Expect things to be recolored, moved, removed, or int
 
 Inspired by Elodea's [Easy cookie cutter planetary annihilation build order #7 DIY edition](https://forums.uberent.com/threads/cookie-cutter-builds-for-new-players.59452/#post-1059439)
 
-- Central location given to spent metal (applied power)
+- Central location given to cumulative spent metal (applied power)
 - Metal and energy arranged in pipelines
 - Limiting factor highlighted
 
-## Elements (2015-04-08)
+There will be a little fudge in the metal spent values. Games on Playfab (or otherwise providing a lobby id) have limited persitance of metal spent value over disconnects  or UI resets. There is some dead reckoning over the disconnect time, but don't expect much in the way of accuracy.
+
+## Elements (2015-04-29)
 
 The element that is currently limiting spent metal/applied build power is highlighted with yellow outline.  A green background suggests "do more of this", red X "do less of this"
 
@@ -26,7 +28,7 @@ Supplies are solid colors, think of them as the flow between blocks.  Demands ar
 
 ### Center:
 
-*Spent Metal*
+*Cumulative Spent Metal*
 
 ### Right (energy) side:
 
