@@ -32,7 +32,7 @@ define([], function() {
     })
 
     storageObject.subscribe(function(ser) {
-      console.log(ser)
+      //console.log(ser)
       storage(JSON.stringify(ser))
     })
   }

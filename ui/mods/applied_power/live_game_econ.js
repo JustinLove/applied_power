@@ -136,10 +136,17 @@ define([
     return model.formatedRateString(model.metalSpent())
   })
 
+  handlers.applied_power_state = function(payload) {
+    console.log(payload)
+    if (payload.lobbyId) {
+      persist.enableStorage(payload.lobbyId, model.metalSpent)
+    }
+  }
+
   return {
     ready: function() {
       console.log('ready')
-      persist.enableStorage('test', model.metalSpent)
+      api.Panel.message(api.Panel.parentId, 'applied_power_hello');
       ko.applyBindings(model)
     },
     metal: metal,

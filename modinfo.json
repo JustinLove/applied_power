@@ -11,6 +11,9 @@
   "scenes": {
     "live_game_econ": [
       "coui://ui/mods/applied_power/bootstrap.js"
+    ],
+    "live_game": [
+      "coui://ui/mods/applied_power/live_game.js"
     ]
   },
   "priority": 100,
