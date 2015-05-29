@@ -3,6 +3,7 @@
 ## 0.5.1
 
 - Game changed required scene header links
+- Removed library CSS that are not used in this scene
 
 ## 0.5.0
 
