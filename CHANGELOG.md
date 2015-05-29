@@ -1,5 +1,9 @@
 # Applied Power
 
+## 0.5.1
+
+- Game changed required scene header links
+
 ## 0.5.0
 
 - Spent is cumulative total instead of per-second
