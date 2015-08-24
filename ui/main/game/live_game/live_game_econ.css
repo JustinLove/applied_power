@@ -143,7 +143,7 @@
 }
 
 .build-power-block {
-  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/bot_factory.png);
+  background-image: url(coui://pa/units/land/bot_factory/bot_factory_icon_buildbar.png);
 }
 
 .build-power-number {
@@ -151,7 +151,7 @@
 }
 
 .metal-supply-block {
-  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/metal_extractor.png);
+  background-image: url(coui://pa/units/land/metal_extractor/metal_extractor_icon_buildbar.png);
 }
 
 .energy-efficiency-block img {
@@ -171,13 +171,13 @@
 }
 
 .energy-demand-block {
-  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/fabrication_bot.png);
+  background-image: url(coui://pa/units/land/fabrication_bot/fabrication_bot_icon_buildbar.png);
 }
 .energy-supply-block {
-  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/energy_plant.png);
+  background-image: url(coui://pa/units/land/energy_plant/energy_plant_icon_buildbar.png);
 }
 .radar-efficiency-block {
-  background-image: url(coui://ui/main/game/live_game/img/build_bar/units/radar.png);
+  background-image: url(coui://pa/units/land/radar/radar_icon_buildbar.png);
 }
 
 .energy-per-metal-supply-bar,

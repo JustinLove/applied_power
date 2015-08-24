@@ -48,6 +48,8 @@ The scale is max of the three values; if the solid color is full, your ratio is 
 
 ## Notable Missing Features
 
+Does not show your eco multiplier.
+
 Does not account for shared economy.
 
 ## Conflicts

@@ -1,5 +1,9 @@
 # Applied Power
 
+## 0.5.2
+
+- Triage release for 86422 (titans) fixes images paths
+
 ## 0.5.1
 
 - Game changed required scene header links
